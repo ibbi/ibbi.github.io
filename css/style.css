@@ -1,0 +1,35 @@
+  .pink-background{
+    background-color: #FF00FF;  
+  }
+  .cyan-background{
+    background-color: #00FFFF;
+  }
+  .red-background{
+    background-color: #FF0000;
+  }
+  .green-background{
+    background-color: #00FF00;  
+  }
+  .blue-background{
+    background-color: #0000FF;
+  }
+  .yellow-background{
+    background-color: #FFFF00;
+  }
+.height33{
+  height: 33.3vh;
+}
+.height5{
+  height: 5vh;
+}
+.height28{
+  height: 28.3vh;
+}
+
+.centered {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

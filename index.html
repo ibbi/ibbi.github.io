@@ -1,1 +1,90 @@
-"hello world" 
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ibbi.io</title>
+  <meta name="google-site-verification" content="Jy0Eb07EPwXz4YzwfhA_TRdyul0EUWcpRbzMJ7sZdyQ" />
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+<!--  <div class= container-fluid> -->
+  
+  <div class="col-md-12"> 
+    <div class="row pink-background height5">
+      <a href="http://www.ibbi.io">clear screen</a>
+    </div> 
+    <div id="justtrash">
+        <div class="centered" id="overarch">
+    <div class="centered" id="canvas1"></div>
+    <div class="centered" id="canvasDiv"></div>
+    <div class="centered" id="canvasDiv1"></div>
+  </div>
+    <div class="row pink-background height28">
+      
+    </div>
+    <div class="row cyan-background height33">
+      
+    </div>
+    <div class="row green-background height33">
+      
+    </div>
+    </div>
+  </div> <!--
+  <div class="col-md-6">
+    <div class="row red-background height">
+
+    </div>
+    <div class="row blue-background height">
+      
+    </div>
+    <div class="row yellow-background height1">
+      
+    </div>
+  </div>-->
+  <!--<img class = "centered" src="https://rawgit.com/NutClump/nutclump.github.io/master/mainface.svg" alt="It's-a-me, ibbi.io"> -->
+
+  <script type="text/javascript" src="screens.js"></script>
+  <script>
+      var canvasWidth = document.getElementById('justtrash').offsetWidth;
+      var canvasHeight = document.getElementById('justtrash').offsetHeight ;
+      var baldObj = new Image();
+      canvas = document.createElement('canvas');
+      canvas.setAttribute('width', canvasWidth);
+      canvas.setAttribute('height', canvasHeight);
+      canvas.setAttribute('id', 'canvas2');
+      document.getElementById('canvas1').appendChild(canvas);
+      if (typeof G_vmlCanvasManager !== "undefined") {
+        canvas = G_vmlCanvasManager.initElement(canvas);
+      }
+      context = canvas.getContext("2d");
+
+      baldObj.onload = function () {
+      context.drawImage(baldObj, (canvasWidth/2) - (canvasHeight/3.6), (canvasHeight/2) - (canvasHeight/2.4) , (canvasHeight/1.8), (canvasHeight/1.2));
+
+    }
+          baldObj.src = "images/watermelon-duck-outline1.png";
+  </script>
+  
+  <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+  <script type="text/javascript" src="re.js"></script>
+  <script type="text/javascript">
+    drawingApp.init();
+  </script>
+
+  <!--if-->
+  <script type="text/javascript" src="re1.js"></script>
+  <script type="text/javascript">
+    drawingApp.init();
+  </script>
+
+<!--</div>-->
+
+</body>
+</html>
