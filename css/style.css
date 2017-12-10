@@ -19,11 +19,9 @@
 .height33{
   height: 33.3vh;
 }
-.height5{
-  height: 5vh;
-}
+
 .height28{
-  height: 28.3vh;
+  height: 25.3vh;
 }
 
 .centered {
@@ -32,4 +30,33 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.mainlinks {
+  height: 8vh;
+  font-family: "Lucida Console", Monospace;
+  text-align: center;
+  font-size: large;
+  vertical-align: middle;
+  line-height: 6vh; 
+}
+body {
+  color: #FFFFFF;
+  font-family: "Lucida Console", Monospace;
+  font-size: large;
+  line-height: 1.5;
+}
+p {
+  font-size: medium;
+  max-width: 650px;
+  margin: 40px auto;
+}
+h3{
+  max-width: 750px;
+  margin: 40px auto;
+}
+a:hover {
+  color:#FFFFFF
+}
+a {
+  color:#FFFFFF
 }
