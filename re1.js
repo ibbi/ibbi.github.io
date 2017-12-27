@@ -67,7 +67,7 @@ var drawingApp = (function () {
 				// Draw the marker tool background
                 //context.drawImage(markerBackgroundImage, 0, 0, canvasWidth, canvasHeight);
                 locX = 18;
-                locY = 19;
+                locY = 59;
                 //draw colors
                 for (i = 0; i < 8; i++) {
                     selected = (curColor === colors[i]);
