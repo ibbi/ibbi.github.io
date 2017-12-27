@@ -27,7 +27,7 @@
 .centered {
 
   position: fixed;
-  top: 50%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -37,8 +37,9 @@
   text-align: center;
   font-size: large;
   vertical-align: middle;
-  line-height: 6vh; 
+  line-height: 8vh; 
 }
+
 body {
   color: #FFFFFF;
   font-family: "Lucida Console", Monospace;

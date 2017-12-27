@@ -12,13 +12,13 @@ var oFace = 0,
     curSize = "huge",
     colors = [colorBlack, colorBrown, colorGrey, colorWhite, colorRed, colorYellow, colorCyan, colorGreen, "eraser", "huge", "large", "normal", "small"],
     mediumStartX = 18,
-    mediumStartY = 99,
+    mediumStartY = 9,
     drawingAreaWidth = document.getElementById('justtrash').offsetWidth,
     drawingAreaHeight = document.getElementById('justtrash').offsetHeight,
     mediumImageWidth = drawingAreaHeight / 10,
     mediumImageHeight = drawingAreaHeight / 20,
     drawingAreaX = 26 + drawingAreaHeight / 10,
-    drawingAreaY = 91,
+    drawingAreaY = 1,
     //drawingAreaWidth = document.getElementById('justtrash').offsetWidth,
     //drawingAreaHeight = document.getElementById('justtrash').offsetHeight,
     s = 0;
@@ -90,7 +90,7 @@ var drawingApp = (function() {
                 // Draw the marker tool background
                 //context.drawImage(markerBackgroundImage, 0, 0, canvasWidth, canvasHeight);
                 locX = 18;
-                locY = 99;
+                locY = 9;
                 //draw colors
                 for (i = 0; i < 8; i++) {
                     selected = (curColor === colors[i]);
