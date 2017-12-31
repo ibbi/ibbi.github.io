@@ -201,7 +201,7 @@ var drawingApp = (function () {
                                         type: 'POST',
                                         data: {
                                             'image': img64,
-                                            'album': 'lShMvTkujGx2Dym',
+                                            'album': 'fT9GcoFwHoJu0Dy',
                                             'type': 'base64'
                                         },
                                         //success: function() { console.log('cool'); }
@@ -218,7 +218,7 @@ var drawingApp = (function () {
                                         type: 'POST',
                                         data: {
                                             'image': img64,
-                                            'album': 'lShMvTkujGx2Dym',
+                                            'album': 'fT9GcoFwHoJu0Dy',
                                             'type': 'base64'
                                         },
                                         //success: function() { console.log('cool'); }
