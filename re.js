@@ -1,5 +1,5 @@
 var oFace = 0,
-    colorBlack = "#191919",
+    colorBlack = "#424242",
     colorGreen = "#659b41",
     colorYellow = "#ffcf33",
     colorBrown = "#986928",
@@ -33,7 +33,7 @@ var drawingApp = (function() {
         canvasWidth = document.getElementById('justtrash').offsetWidth,
         canvasHeight = document.getElementById('justtrash').offsetHeight,
         outlineImage = new Image(),
-        markerImage = new Image(),
+        //markerImage = new Image(),
         eraserImage = new Image(),
         smallImage = new Image(),
         normalImage = new Image(),
@@ -41,7 +41,7 @@ var drawingApp = (function() {
         hugeImage = new Image(),
         onFace = new Image(),
         saveButton = new Image(),
-        markerBackgroundImage = new Image(),
+        //markerBackgroundImage = new Image(),
         nonColors = [eraserImage, hugeImage, largeImage, normalImage, smallImage, onFace, saveButton],
         clickX = [],
         clickY = [],
@@ -50,7 +50,7 @@ var drawingApp = (function() {
         clickSize = [],
         clickDrag = [],
         paint = false,
-        totalLoadResources = 10,
+        totalLoadResources = 8,
         curLoadResNum = 0,
 
 
@@ -167,7 +167,7 @@ var drawingApp = (function() {
             context.restore();
 
             // Draw the outline image
-            context.drawImage(outlineImage, (drawingAreaWidth / 2) - (drawingAreaHeight / 3.6), (drawingAreaHeight / 2) - (drawingAreaHeight / 2.4), (drawingAreaHeight / 1.8), (drawingAreaHeight / 1.2));
+            context.drawImage(outlineImage, (drawingAreaWidth / 2) - (drawingAreaHeight / 4.2), (drawingAreaHeight / 2) - (drawingAreaHeight / 2.8), (drawingAreaHeight / 2.1), (drawingAreaHeight / 1.4));
         },
 
         // Adds a point to the drawing array.
@@ -214,14 +214,41 @@ var drawingApp = (function() {
                                 oFace = 1;
                             } else if (mouseY > mediumStartY + mediumImageHeight * 14 && mouseY < mediumStartY + mediumImageHeight * 15) {
                                 var currScreen = TakeScreenshot();
+                                var img64 = currScreen.replace(/.*,/, '');
                                 if (!s){
-                                    var lastScreen = currScreen;
-                                    console.log(lastScreen);
+                                    var lastScreen = img64;
                                     s++;
+                                    $.ajax({
+                                        url: 'https://api.imgur.com/3/image',
+                                        headers: {
+                                            'Authorization': 'Client-ID 8fc50f66288383b',
+                                            
+                                        },
+                                        type: 'POST',
+                                        data: {
+                                            'image': img64,
+                                            'album': 'lShMvTkujGx2Dym',
+                                            'type': 'base64'
+                                        },
+                                        //success: function() { console.log('cool'); }
+                                    });
                                 }
-                                if (lastScreen != currScreen){
-                                    lastScreen = currScreen;
-                                    console.log(lastScreen);
+                                if (lastScreen != img64){
+                                    lastScreen = img64;
+                                    $.ajax({
+                                        url: 'https://api.imgur.com/3/image',
+                                        headers: {
+                                            'Authorization': 'Client-ID 8fc50f66288383b',
+                                            
+                                        },
+                                        type: 'POST',
+                                        data: {
+                                            'image': img64,
+                                            'album': 'lShMvTkujGx2Dym',
+                                            'type': 'base64'
+                                        },
+                                        //success: function() { console.log('cool'); }
+                                    });
                                 }
                                 
                             }
@@ -300,8 +327,8 @@ var drawingApp = (function() {
             // Load images
 
 
-            markerImage.onload = resourceLoaded;
-            markerImage.src = "images/marker-outline.png";
+            //markerImage.onload = resourceLoaded;
+            //markerImage.src = "images/marker-outline.png";
 
             smallImage.onload = resourceLoaded;
             smallImage.src = "images/small.png";
@@ -318,8 +345,8 @@ var drawingApp = (function() {
             eraserImage.onload = resourceLoaded;
             eraserImage.src = "images/eraser-outline.png";
 
-            markerBackgroundImage.onload = resourceLoaded;
-            markerBackgroundImage.src = "images/marker-background.png";
+            //markerBackgroundImage.onload = resourceLoaded;
+            //markerBackgroundImage.src = "images/marker-background.png";
 
             outlineImage.onload = resourceLoaded;
             outlineImage.src = "images/watermelon-duck-outline.png";

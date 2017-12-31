@@ -10,7 +10,7 @@ var drawingApp = (function () {
 		canvasWidth = document.getElementById('justtrash').offsetWidth,
         canvasHeight = document.getElementById('justtrash').offsetHeight,
         outlineImage = new Image(),
-        markerImage = new Image(),
+        //markerImage = new Image(),
         eraserImage = new Image(),
         smallImage = new Image(),
         normalImage = new Image(),
@@ -18,7 +18,7 @@ var drawingApp = (function () {
         hugeImage = new Image(),
         onFace = new Image(),
         saveButton = new Image(),
-        markerBackgroundImage = new Image(),
+        //markerBackgroundImage = new Image(),
         nonColors = [eraserImage, hugeImage, largeImage, normalImage, smallImage, onFace, saveButton],
 		clickX = [],
 		clickY = [],
@@ -27,7 +27,7 @@ var drawingApp = (function () {
 		clickSize = [],
 		clickDrag = [],
 		paint = false,
-		totalLoadResources = 9,
+		totalLoadResources = 7,
 		curLoadResNum = 0,
 
 
@@ -188,20 +188,47 @@ var drawingApp = (function () {
                                 oFace = 0;
                             } else if (mouseY > mediumStartY + mediumImageHeight * 14 && mouseY < mediumStartY + mediumImageHeight * 15) {
                                 var currScreen = TakeScreenshot();
+                                var img64 = currScreen.replace(/.*,/, '');
                                 if (!s){
-                                    var lastScreen = currScreen;
-                                    console.log(lastScreen);
+                                    var lastScreen = img64;
                                     s++;
+                                    $.ajax({
+                                        url: 'https://api.imgur.com/3/image',
+                                        headers: {
+                                            'Authorization': 'Client-ID 8fc50f66288383b',
+                                            
+                                        },
+                                        type: 'POST',
+                                        data: {
+                                            'image': img64,
+                                            'album': 'lShMvTkujGx2Dym',
+                                            'type': 'base64'
+                                        },
+                                        //success: function() { console.log('cool'); }
+                                    });
                                 }
-                                if (lastScreen != currScreen){
-                                    lastScreen = currScreen;
-                                    console.log(lastScreen);
+                                if (lastScreen != img64){
+                                    lastScreen = img64;
+                                    $.ajax({
+                                        url: 'https://api.imgur.com/3/image',
+                                        headers: {
+                                            'Authorization': 'Client-ID 8fc50f66288383b',
+                                            
+                                        },
+                                        type: 'POST',
+                                        data: {
+                                            'image': img64,
+                                            'album': 'lShMvTkujGx2Dym',
+                                            'type': 'base64'
+                                        },
+                                        //success: function() { console.log('cool'); }
+                                    });
                                 }
+                                
                             }
 
-
-					}
-				} 
+                        }
+                    }
 				
 				paint = true;
 				addClick(mouseX, mouseY, false);
@@ -274,8 +301,8 @@ var drawingApp = (function () {
 
 			// Load images
 
-			markerImage.onload = resourceLoaded;
-			markerImage.src = "images/marker-outline.png";
+			//markerImage.onload = resourceLoaded;
+			//markerImage.src = "images/marker-outline.png";
 
 			smallImage.onload = resourceLoaded;
 			smallImage.src = "images/small.png";
@@ -292,8 +319,8 @@ var drawingApp = (function () {
 			eraserImage.onload = resourceLoaded;
 			eraserImage.src = "images/eraser-outline.png";
 
-			markerBackgroundImage.onload = resourceLoaded;
-			markerBackgroundImage.src = "images/marker-background.png";
+			//markerBackgroundImage.onload = resourceLoaded;
+			//markerBackgroundImage.src = "images/marker-background.png";
 
 			onFace.onload = resourceLoaded;
 			onFace.src = "images/onface1.png";

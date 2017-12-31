@@ -13,11 +13,11 @@ function TakeScreenshot() {
 	bufferScreenshot.height = drawingAreaHeight; bufferScreenshot.width = drawingAreaWidth;
 	var contextScreenshot = bufferScreenshot.getContext("2d");
 	contextScreenshot.drawImage(
-	document.getElementById("canvas2"), drawingAreaX, 0, drawingAreaWidth, drawingAreaHeight);
+	document.getElementById("canvas2"), 0, 0, drawingAreaWidth, drawingAreaHeight);
 	contextScreenshot.drawImage(
-	document.getElementById("canvas"), drawingAreaX, 0, drawingAreaWidth, drawingAreaHeight);
+	document.getElementById("canvas"), 0, 0, drawingAreaWidth, drawingAreaHeight);
 	contextScreenshot.drawImage(
-	document.getElementById("canvas3"), drawingAreaX, 0, drawingAreaWidth, drawingAreaHeight);
+	document.getElementById("canvas3"), 0, 0, drawingAreaWidth, drawingAreaHeight);
 	var dataURL = bufferScreenshot.toDataURL();
 	return dataURL;
 }
