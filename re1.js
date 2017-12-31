@@ -204,7 +204,7 @@ var drawingApp = (function () {
                                             'album': 'fT9GcoFwHoJu0Dy',
                                             'type': 'base64'
                                         },
-                                        //success: function() { console.log('cool'); }
+                                        success: function() { window.alert("Posted!"); }
                                     });
                                 }
                                 if (lastScreen != img64){
@@ -221,7 +221,7 @@ var drawingApp = (function () {
                                             'album': 'fT9GcoFwHoJu0Dy',
                                             'type': 'base64'
                                         },
-                                        //success: function() { console.log('cool'); }
+                                        success: function() { window.alert("Posted!"); }
                                     });
                                 }
                                 
