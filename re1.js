@@ -194,6 +194,10 @@ var drawingApp = (function () {
                                 if (!s){
                                     var lastScreen = img64;
                                     s++;
+                                    rtime++;
+                                    setTimeout(function() {
+                                        rtime = 0;
+                                    }, 5000);
                                     $.ajax({
                                         url: 'https://api.imgur.com/3/image',
                                         headers: {
@@ -209,8 +213,12 @@ var drawingApp = (function () {
                                         success: function() { window.alert("Posted!"); }
                                     });
                                 }
-                                if (lastScreen != img64){
+                                if ((lastScreen != img64)&&(rtime == 0)){
                                     lastScreen = img64;
+                                    rtime++;
+                                    setTimeout(function() {
+                                        rtime = 0;
+                                    }, 5000);
                                     $.ajax({
                                         url: 'https://api.imgur.com/3/image',
                                         headers: {
