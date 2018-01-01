@@ -185,8 +185,10 @@ var drawingApp = (function () {
                         	}
                         	
                         	if (mouseY > mediumStartY + mediumImageHeight * 13 && mouseY < mediumStartY + mediumImageHeight * 14) {
+                                e.preventDefault();
                                 oFace = 0;
                             } else if (mouseY > mediumStartY + mediumImageHeight * 14 && mouseY < mediumStartY + mediumImageHeight * 15) {
+                                e.preventDefault();
                                 var currScreen = TakeScreenshot();
                                 var img64 = currScreen.replace(/.*,/, '');
                                 if (!s){
