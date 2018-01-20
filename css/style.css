@@ -1,29 +1,36 @@
-  .pink-background{
-    background-color: #FF00FF;  
-  }
-  .cyan-background{
-    background-color: #00FFFF;
-  }
-  .red-background{
-    background-color: #FF0000;
-  }
-  .green-background{
-    background-color: #00FF00;  
-  }
-  .blue-background{
-    background-color: #0000FF;
-  }
-  .yellow-background{
-    background-color: #FFFF00;
-  }
+.pink-background{
+  background-color: #ffb7c5;  
+}
+.cyan-background{
+  background-color: #b7c5ff;
+  /*#b7e9ff;*/
+}
+.red-background{
+  background-color: #FF0000;
+}
+.green-background{
+  background-color: #c5ffb7; 
+  /*#b7ffcd;*/  
+}
+.blue-background{
+   background-color: #0000FF;
+}
+.yellow-background{
+  background-color: #FFFF00;
+}
+.offwhite-background{
+  background-color: #FCF5EB;
+}
 .height33{
-  height: 33.3vh;
-}
+  height: 33.3vh;}
 
-.height28{
-  height: 25.3vh;
+.height92{
+  height: 92vh;
 }
-
+img.center {
+    display: block;
+    margin: 0 auto;
+}
 .centered {
 
   position: fixed;
@@ -35,13 +42,24 @@
   height: 8vh;
   font-family: "Lucida Console", Monospace;
   text-align: center;
-  font-size: 1.8vw;
+  font-size: 200%;
   vertical-align: middle;
   line-height: 8vh; 
+  color: #212b31;
+}
+.blockLink {
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+}
+.textLink {
+  color:#000000;
 }
 
 body {
-  color: #FFFFFF;
+  color: #636363;
   font-family: "Lucida Console", Monospace;
   font-size: 16px;
   line-height: 1.5;
@@ -54,11 +72,11 @@ p {
 h3{
   max-width: 750px;
   margin: 40px auto;
-}
-a:hover {
-  color:#FFFFFF;
+  font-size: 115%;
 }
 a {
-  font-size: 105%;
-  color:#FFFFFF;
+  color:#212b31;
+}
+a:hover {
+  color:#212b31;
 }
