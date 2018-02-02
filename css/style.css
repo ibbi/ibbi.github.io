@@ -31,6 +31,11 @@ img.center {
     display: block;
     margin: 0 auto;
 }
+.imgcc {
+  width: 100%;
+  max-width: 500px;
+
+}
 .centered {
 
   position: fixed;
@@ -40,9 +45,10 @@ img.center {
 }
 .mainlinks {
   height: 8vh;
+
   font-family: "Lucida Console", Monospace;
   text-align: center;
-  font-size: 200%;
+  font-size: 150%;
   vertical-align: middle;
   line-height: 8vh; 
   color: #212b31;

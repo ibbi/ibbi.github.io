@@ -14,9 +14,9 @@
   <meta charset="UTF-8">
   <title>ibbi</title>
   <meta name="google-site-verification" content="Jy0Eb07EPwXz4YzwfhA_TRdyul0EUWcpRbzMJ7sZdyQ" />
-  <meta name=viewport content="width=device-width, initial-scale=.6">
+  <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+ 
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -24,78 +24,78 @@
 </head>
 
 <body class="green-background">
-<!--  <div class= container-fluid> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="row mainlinks">
+        <div class="col-xs-4 pink-background">
+          <a href="./">me<span class="blockLink"></span></a>
+        </div>      
+        <div class="col-xs-4 cyan-background">
+          <a href="done">done<span class="blockLink"></span></a>
+        </div>
+        <div class="col-xs-4 green-background">
+          <a href="https://imgur.com/a/WSkGN">gallery<span class="blockLink" target="_blank"></span></a>
+        </div>
+      </div>
+      <div id="justtrash">
+        <div class="centered" id="overarch">
+          <div class="centered" id="canvas1"></div>
+          <div class="centered" id="canvasDiv"></div>
+          <div class="centered" id="canvasDiv1"></div>
+        </div>
+        <div class="row height92">
+          
+        </div>
+        </div>
+     <!--
+      <div class="col-md-6">
+        <div class="row red-background height">
 
-  <div class="row mainlinks">
-    <div class="col-xs-4 pink-background">
-      <a href="./">me<span class="blockLink"></span></a>
-    </div>      
-    <div class="col-xs-4 cyan-background">
-      <a href="done">done<span class="blockLink"></span></a>
-    </div>
-    <div class="col-xs-4 green-background">
-      <a href="https://imgur.com/a/WSkGN">gallery<span class="blockLink"></span></a>
+        </div>
+        <div class="row blue-background height">
+          
+        </div>
+        <div class="row yellow-background height1">
+          
+        </div>
+      </div>-->
+      <!--<img class = "centered" src="https://rawgit.com/NutClump/nutclump.github.io/master/mainface.svg" alt="It's-a-me, ibbi.io"> -->
+
+      <script type="text/javascript" src="screens.js"></script>
+      <script>
+          var canvasWidth = document.getElementById('justtrash').offsetWidth;
+          var canvasHeight = document.getElementById('justtrash').offsetHeight ;
+          var baldObj = new Image();
+          canvas = document.createElement('canvas');
+          canvas.setAttribute('width', canvasWidth);
+          canvas.setAttribute('height', canvasHeight);
+          canvas.setAttribute('id', 'canvas2');
+          document.getElementById('canvas1').appendChild(canvas);
+          if (typeof G_vmlCanvasManager !== "undefined") {
+            canvas = G_vmlCanvasManager.initElement(canvas);
+          }
+          context = canvas.getContext("2d");
+
+          baldObj.onload = function () {
+          context.drawImage(baldObj, (canvasWidth/2) - (canvasHeight/4.2), (canvasHeight/2) - (canvasHeight/2.8) , (canvasHeight/2.1), (canvasHeight/1.4));
+
+        }
+              baldObj.src = "images/watermelon-duck-outline1.png";
+      </script>
+      
+      <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+      <script type="text/javascript" src="re.js"></script>
+      <script type="text/javascript">
+        drawingApp.init();
+      </script>
+
+      <!--if-->
+      <script type="text/javascript" src="re1.js"></script>
+      <script type="text/javascript">
+        drawingApp.init();
+      </script>
     </div>
   </div>
-  <div id="justtrash">
-    <div class="centered" id="overarch">
-      <div class="centered" id="canvas1"></div>
-      <div class="centered" id="canvasDiv"></div>
-      <div class="centered" id="canvasDiv1"></div>
-    </div>
-    <div class="row height92">
-      
-    </div>
-    </div>
-  </div> <!--
-  <div class="col-md-6">
-    <div class="row red-background height">
-
-    </div>
-    <div class="row blue-background height">
-      
-    </div>
-    <div class="row yellow-background height1">
-      
-    </div>
-  </div>-->
-  <!--<img class = "centered" src="https://rawgit.com/NutClump/nutclump.github.io/master/mainface.svg" alt="It's-a-me, ibbi.io"> -->
-
-  <script type="text/javascript" src="screens.js"></script>
-  <script>
-      var canvasWidth = document.getElementById('justtrash').offsetWidth;
-      var canvasHeight = document.getElementById('justtrash').offsetHeight ;
-      var baldObj = new Image();
-      canvas = document.createElement('canvas');
-      canvas.setAttribute('width', canvasWidth);
-      canvas.setAttribute('height', canvasHeight);
-      canvas.setAttribute('id', 'canvas2');
-      document.getElementById('canvas1').appendChild(canvas);
-      if (typeof G_vmlCanvasManager !== "undefined") {
-        canvas = G_vmlCanvasManager.initElement(canvas);
-      }
-      context = canvas.getContext("2d");
-
-      baldObj.onload = function () {
-      context.drawImage(baldObj, (canvasWidth/2) - (canvasHeight/4.2), (canvasHeight/2) - (canvasHeight/2.8) , (canvasHeight/2.1), (canvasHeight/1.4));
-
-    }
-          baldObj.src = "images/watermelon-duck-outline1.png";
-  </script>
-  
-  <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
-  <script type="text/javascript" src="re.js"></script>
-  <script type="text/javascript">
-    drawingApp.init();
-  </script>
-
-  <!--if-->
-  <script type="text/javascript" src="re1.js"></script>
-  <script type="text/javascript">
-    drawingApp.init();
-  </script>
-
-<!--</div>-->
 
 </body>
 </html>
