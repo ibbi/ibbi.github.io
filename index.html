@@ -29,24 +29,25 @@
 
       <div class="row mainlinks">
         <div class="col-xs-6 pink-background">
-          <a href="./">me<span class="blockLink"></span></a>
+          <a href="./">where<span class="blockLink"></span></a>
         </div>      
         <!-- <div class="col-xs-4 cyan-background">
           <a href="done">done<span class="blockLink"></span></a>
         </div> -->
-        <div class="col-xs-6 green-background">
+        <div class="col-xs-6 cyan-background">
           <a href="hairy">hair<span class="blockLink"></span></a>
         </div>
       </div>
       <div style="text-align: center;">
         <img src="images/pyramid.gif" class="imgcc" alt="animation">
       </div>
-      <h3>thanks for stopping by!</h3>
+      <!-- <h3>thanks for stopping by!</h3> -->
       <p>
         <!-- Check out some things I've <a href="done" class="textLink">done</a>, or draw me a fresh <a href="hairy" class="textLink">haircut</a>.
         Feel free to reach out on <a href="https://m.me/ihashme" class="textLink" target="_blank">messenger</a> or shoot me an <a href="mailto:hi@ibbi.io" class="textLink" target="_blank">email</a>. -->
-        i'm in austin right now
+
       </p>
+      <h1 id="location">austin</h1>
 
 
 
@@ -68,5 +69,20 @@
     </div>
   </div>
 
+  <script type="text/javascript">
+  function color() {
+      var letters = '0123456789ABCDEF'.split('');
+      var color = '#';
+      for (var i = 0; i < 6; i++ ) {
+          color += letters[Math.round(Math.random() * 15)];
+      }
+      return color;
+  }
+  function hype() {
+    document.getElementById("location").style.color = color();
+    requestAnimationFrame(hype);
+  }
+hype();
+  </script>
 </body>
 </html>
