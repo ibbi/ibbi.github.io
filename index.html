@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111241188-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-111241188-1');
@@ -20,7 +21,7 @@
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel="stylesheet" href="css/style.css">
 
-  
+
 </head>
 
 <body class="pink-background col-md-12">
@@ -30,7 +31,7 @@
       <div class="row mainlinks">
         <div class="col-xs-6 pink-background">
           <a href="./">where<span class="blockLink"></span></a>
-        </div>      
+        </div>
         <!-- <div class="col-xs-4 cyan-background">
           <a href="done">done<span class="blockLink"></span></a>
         </div> -->
@@ -40,7 +41,7 @@
       </div>
       <div style="text-align: center;">
         <img src="images/pyramid.gif" class="imgcc" alt="animation">
-        <h1 id="location">austin</h1>
+        <h1 id="location">sf</h1>
       </div>
       <!-- <h3>thanks for stopping by!</h3> -->
       <p>
@@ -48,7 +49,7 @@
         Feel free to reach out on <a href="https://m.me/ihashme" class="textLink" target="_blank">messenger</a> or shoot me an <a href="mailto:hi@ibbi.io" class="textLink" target="_blank">email</a>. -->
 
       </p>
-      
+
 
 
 
@@ -71,19 +72,20 @@
   </div>
 
   <script type="text/javascript">
-  function color() {
+    function color() {
       var letters = '0123456789ABCDEF'.split('');
       var color = '#';
-      for (var i = 0; i < 6; i++ ) {
-          color += letters[Math.round(Math.random() * 15)];
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.round(Math.random() * 15)];
       }
       return color;
-  }
-  function hype() {
-    document.getElementById("location").style.color = color();
-    requestAnimationFrame(hype);
-  }
-hype();
+    }
+    function hype() {
+      document.getElementById("location").style.color = color();
+      requestAnimationFrame(hype);
+    }
+    hype();
   </script>
 </body>
+
 </html>
