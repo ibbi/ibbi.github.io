@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-111241188-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111241188-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "UA-111241188-1");
+    </script>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>Ibrahim Hashme</title>
+    <meta
+      name="google-site-verification"
+      content="Jy0Eb07EPwXz4YzwfhA_TRdyul0EUWcpRbzMJ7sZdyQ"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="Ibrahim,Hashme,personal,website,portfolio" />
+    <meta name="author" content="Ibrahim Hashme" />
+    <link
+      rel="stylesheet prefetch"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    gtag('config', 'UA-111241188-1');
-  </script>
-  <script src="http://code.jquery.com/jquery.min.js"></script>
-  <meta charset="UTF-8">
-  <title>Ibrahim Hashme</title>
-  <meta name="google-site-verification" content="Jy0Eb07EPwXz4YzwfhA_TRdyul0EUWcpRbzMJ7sZdyQ" />
-  <meta name=viewport content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Ibrahim,Hashme,personal,website,portfolio">
-  <meta name="author" content="Ibrahim Hashme">
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="css/style.css">
-
-
-</head>
-
-<body class="pink-background col-md-12">
-  <div class="container-fluid">
-    <div class="row">
-
-      <div class="row mainlinks">
-        <div class="col-xs-6 pink-background">
-          <a href="./">where<span class="blockLink"></span></a>
-        </div>
-        <!-- <div class="col-xs-4 cyan-background">
+  <body class="pink-background col-md-12">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="row mainlinks">
+          <div class="col-xs-6 pink-background">
+            <a href="./">where<span class="blockLink"></span></a>
+          </div>
+          <!-- <div class="col-xs-4 cyan-background">
           <a href="done">done<span class="blockLink"></span></a>
         </div> -->
-        <div class="col-xs-6 cyan-background">
-          <a href="hairy">hair<span class="blockLink"></span></a>
+          <div class="col-xs-6 cyan-background">
+            <a href="hairy">hair<span class="blockLink"></span></a>
+          </div>
         </div>
-      </div>
-      <div style="text-align: center;">
-        <img src="images/pyramid.gif" class="imgcc" alt="animation">
-        <h1 id="location">sf</h1>
-      </div>
-      <!-- <h3>thanks for stopping by!</h3> -->
-      <p>
-        <!-- Check out some things I've <a href="done" class="textLink">done</a>, or draw me a fresh <a href="hairy" class="textLink">haircut</a>.
+        <div style="text-align: center">
+          <img src="images/pyramid.gif" class="imgcc" alt="animation" />
+          <h1 id="location">san juan</h1>
+        </div>
+        <!-- <h3>thanks for stopping by!</h3> -->
+        <p>
+          <!-- Check out some things I've <a href="done" class="textLink">done</a>, or draw me a fresh <a href="hairy" class="textLink">haircut</a>.
         Feel free to reach out on <a href="https://m.me/ihashme" class="textLink" target="_blank">messenger</a> or shoot me an <a href="mailto:hi@ibbi.io" class="textLink" target="_blank">email</a>. -->
+        </p>
 
-      </p>
-
-
-
-
-
-      <!--
+        <!--
       <div class="col-md-6">
         <div class="row red-background height">
 
@@ -66,26 +68,24 @@
           
         </div>
       </div>-->
-      <!--<img class = "centered" src="https://rawgit.com/NutClump/nutclump.github.io/master/mainface.svg" alt="It's-a-me, ibbi.io"> -->
-
+        <!--<img class = "centered" src="https://rawgit.com/NutClump/nutclump.github.io/master/mainface.svg" alt="It's-a-me, ibbi.io"> -->
+      </div>
     </div>
-  </div>
 
-  <script type="text/javascript">
-    function color() {
-      var letters = '0123456789ABCDEF'.split('');
-      var color = '#';
-      for (var i = 0; i < 6; i++) {
-        color += letters[Math.round(Math.random() * 15)];
+    <script type="text/javascript">
+      function color() {
+        var letters = "0123456789ABCDEF".split("");
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.round(Math.random() * 15)];
+        }
+        return color;
       }
-      return color;
-    }
-    function hype() {
-      document.getElementById("location").style.color = color();
-      requestAnimationFrame(hype);
-    }
-    hype();
-  </script>
-</body>
-
+      function hype() {
+        document.getElementById("location").style.color = color();
+        requestAnimationFrame(hype);
+      }
+      hype();
+    </script>
+  </body>
 </html>
